@@ -17,7 +17,7 @@ export default function FAQ() {
     },
     {
       question: 'Can I speak directly with my attorney?',
-      answer: 'Yes, at CyberLex Advocate, we believe in clear and open communication. You will have direct access to your attorney throughout your case, allowing you to discuss your concerns, get updates, and receive personalized advice whenever needed.',
+      answer: 'Yes, at LawSake, we believe in clear and open communication. You will have direct access to your attorney throughout your case, allowing you to discuss your concerns, get updates, and receive personalized advice whenever needed.',
     },
     {
       question: 'What should I bring to my appointment?',
@@ -68,7 +68,6 @@ export default function FAQ() {
         </div>
 
         <div className={`text-center mt-12 transition-all duration-1000 delay-500 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-gray-600 mb-4">Read More</p>
           <a
             href="/contact"
             className="inline-block bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-110 hover:shadow-xl"

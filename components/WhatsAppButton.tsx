@@ -1,9 +1,11 @@
 import { FaWhatsapp } from 'react-icons/fa'
 
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919571218439'
+
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/919571218439"
+      href={`https://wa.me/${WHATSAPP_NUMBER}`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 animate-float z-50"

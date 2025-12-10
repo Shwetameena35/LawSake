@@ -1,13 +1,18 @@
 import Link from 'next/link'
 import { FaEnvelope, FaPhone } from 'react-icons/fa'
 
+const COMPANY_NAME = process.env.NEXT_PUBLIC_COMPANY_NAME || 'LawSake'
+const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'contact@cyberlexadvocate.com'
+const CONTACT_PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE || '+91 95712 18439'
+const CURRENT_YEAR = new Date().getFullYear()
+
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">CyberLex Advocate</h3>
+            <h3 className="text-xl font-bold mb-4">{COMPANY_NAME}</h3>
             <p className="text-gray-400 mb-4">
               Leading Cyber Law Firm in India, specializing in cybercrime, data privacy, and online security.
             </p>
@@ -39,15 +44,15 @@ export default function Footer() {
               <h4 className="font-semibold mb-2">Contact Details</h4>
               <div className="flex items-center text-gray-400 mb-1">
                 <FaPhone className="mr-2" />
-                <span>+91 95712 18439</span>
+                <span>{CONTACT_PHONE}</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <FaEnvelope className="mr-2" />
-                <span>contact@cyberlexadvocate.com</span>
+                <span>{CONTACT_EMAIL}</span>
               </div>
             </div>
             <div className="text-gray-400 text-sm">
-              Copyright © 2025 CyberLex Advocate.
+              Copyright © {CURRENT_YEAR} {COMPANY_NAME}.
             </div>
           </div>
         </div>

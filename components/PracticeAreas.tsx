@@ -66,17 +66,11 @@ export default function PracticeAreas() {
                 key={practice.id}
                 ref={ref}
                 id={practice.id}
-                className={`bg-gray-50 rounded-lg shadow-lg p-6 hover-lift transition-all duration-1000 ${delays[index] || 'delay-0'} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                className={`bg-gray-50 rounded-lg shadow-lg p-4 hover-lift transition-all duration-1000 ${delays[index] || 'delay-0'} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               >
-                <div className="text-4xl mb-4 hover-scale transition-transform duration-300 inline-block">{practice.icon}</div>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">{practice.title}</h4>
-                <p className="text-gray-600 mb-4">{practice.description}</p>
-                <Link
-                  href="/contact"
-                  className="text-primary font-semibold hover:underline inline-flex items-center transition-all duration-300 hover:translate-x-2"
-                >
-                  Read More →
-                </Link>
+                <div className="text-3xl mb-3 hover-scale transition-transform duration-300 inline-block">{practice.icon}</div>
+                <h4 className="text-lg font-bold text-gray-800 mb-2">{practice.title}</h4>
+                <p className="text-gray-600 text-sm mb-0">{practice.description}</p>
               </div>
             )
           })}

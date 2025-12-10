@@ -3,6 +3,9 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
+const COMPANY_NAME = process.env.NEXT_PUBLIC_COMPANY_NAME || 'LawSake'
+const ESTD_YEAR = process.env.NEXT_PUBLIC_ESTD_YEAR || '2021'
+
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -11,7 +14,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center" style={{ overflow: 'visible', overflowX: 'hidden', overflowY: 'visible' }}>
       {/* Background Image Layer */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -19,6 +22,7 @@ export default function Hero() {
           backgroundImage: 'url("/hero-bg.jpg")',
           backgroundPosition: 'center center',
           backgroundAttachment: 'fixed',
+          overflow: 'visible'
         }}
       >
         {/* Dark Gradient Overlay for better text readability */}
@@ -46,14 +50,14 @@ export default function Hero() {
             
             {/* ESTD Badge */}
             <div className={`text-xs mb-2 tracking-widest uppercase transition-all duration-700 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'}`}>
-              ESTD 2021
+              ESTD {ESTD_YEAR}
             </div>
             
             {/* Main Heading */}
             <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-4 drop-shadow-2xl transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)'
             }}>
-              CYBERLEX ADVOCATE
+              {COMPANY_NAME}
             </h1>
             
             {/* Subtitle */}
